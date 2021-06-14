@@ -14,11 +14,14 @@ def hello():
 @app.route("/<int:number>")
 def check_guess(number):
     if number == random_number:
-        return "<h1 style='color: green'>That was the correct number!! :)</h1>"
+        return "<h1 style='color: green'>That was the correct number!! :)</h1>" \
+               "<img src='https://media.giphy.com/media/4xpB3eE00FfBm/giphy.gif' width='500px' />"
     elif number > random_number:
-        return "<h1 style='color:red'>Your answer is too high! :(</h1>"
+        return "<h1 style='color:red'>Your answer is too high! :(</h1>" \
+               "<img src='https://media.giphy.com/media/kZDGNBLCIOTmw/giphy.gif' width='500px' />"
     elif number < random_number:
-        return "<h1 style='color:blue'>Your answer is too low!</h1>"
+        return "<h1 style='color:blue'>Your answer is too low!</h1>" \
+               "<img src='https://media.giphy.com/media/McgWV3RzDQZZNdFWRA/giphy.gif' width='500px' />"
 
 
 if __name__ == "__main__":
